@@ -11,6 +11,8 @@ A lightweight Windows desktop application for quick file and folder backups with
 
 **DropBackup** is a simple yet powerful tool that creates timestamped backups of files and folders with just a drag-and-drop. Whether you need to preserve a working version before making changes or quickly archive important files, DropBackup makes it effortless.
 
+![DropBackup Workflow](Assets/dropbackup-workflow.png)
+
 ## Features
 
 - **Quick Backup Operation**
