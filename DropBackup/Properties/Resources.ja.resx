@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xsd:import namespace="http://www.w3.org/2001/XMLSchema"/>
+	<xsd:element name="root" msdata:IsDataSet="true">
+	  <xsd:complexType>
+		<xsd:choice maxOccurs="unbounded">
+		  <xsd:element name="metadata">
+			<xsd:complexType>
+			  <xsd:sequence>
+				<xsd:element name="value" type="xsd:string" minOccurs="0"/>
+			  </xsd:sequence>
+			  <xsd:attribute name="name" use="required" type="xsd:string"/>
+			  <xsd:attribute name="type" type="xsd:string"/>
+			  <xsd:attribute name="mimetype" type="xsd:string"/>
+			</xsd:complexType>
+		  </xsd:element>
+		  <xsd:element name="assembly">
+			<xsd:complexType>
+			  <xsd:attribute name="alias" type="xsd:string"/>
+			  <xsd:attribute name="name" type="xsd:string"/>
+			</xsd:complexType>
+		  </xsd:element>
+		  <xsd:element name="data">
+			<xsd:complexType>
+			  <xsd:sequence>
+				<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+				<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+			  </xsd:sequence>
+			  <xsd:attribute name="name" use="required" type="xsd:string"/>
+			  <xsd:attribute name="type" type="xsd:string"/>
+			  <xsd:attribute name="mimetype" type="xsd:string"/>
+			</xsd:complexType>
+		  </xsd:element>
+		  <xsd:element name="resheader">
+			<xsd:complexType>
+			  <xsd:sequence>
+				<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+			  </xsd:sequence>
+			  <xsd:attribute name="name" use="required" type="xsd:string"/>
+			</xsd:complexType>
+		  </xsd:element>
+		</xsd:choice>
+	  </xsd:complexType>
+	</xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+	<value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+	<value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+	<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+	<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- ===== Window titles ===== -->
+  <data name="MainWindow_Title" xml:space="preserve">
+	<value>DropBackup 設定</value>
+  </data>
+  <data name="AboutWindow_Title" xml:space="preserve">
+	<value>About DropBackup</value>
+  </data>
+
+  <!-- ===== MainWindow tabs ===== -->
+  <data name="Tab_Backup" xml:space="preserve">
+	<value>バックアップ</value>
+  </data>
+  <data name="Tab_Filter" xml:space="preserve">
+	<value>ファイルフィルタ</value>
+  </data>
+  <data name="Tab_General" xml:space="preserve">
+	<value>全般</value>
+  </data>
+
+  <!-- ===== Backup tab ===== -->
+  <data name="Section_DateFormat" xml:space="preserve">
+	<value>日時の書式</value>
+  </data>
+  <data name="Label_Preview" xml:space="preserve">
+	<value>プレビュー: </value>
+  </data>
+  <data name="Label_FormatHint" xml:space="preserve">
+	<value>書式指定子: yyyy=年　MM=月　dd=日　HH=時　mm=分　ss=秒</value>
+  </data>
+  <data name="Section_AppendPos" xml:space="preserve">
+	<value>日時の付加位置</value>
+  </data>
+  <data name="RadioBtn_PosBefore" xml:space="preserve">
+	<value>ファイル名の前　（例: 250615-1430 report.docx）</value>
+  </data>
+  <data name="RadioBtn_PosAfter" xml:space="preserve">
+	<value>ファイル名の後　（例: report 250615-1430.docx）</value>
+  </data>
+  <data name="Section_DuplicateHandling" xml:space="preserve">
+	<value>重複ファイルの扱い</value>
+  </data>
+  <data name="RadioBtn_OpeRename" xml:space="preserve">
+	<value>連番を付加する　（例: report 250615_2.docx）</value>
+  </data>
+  <data name="RadioBtn_OpeOverride" xml:space="preserve">
+	<value>既存ファイルを上書きする</value>
+  </data>
+  <data name="RadioBtn_OpeDelete" xml:space="preserve">
+	<value>既存ファイルを削除してから複製する</value>
+  </data>
+  <data name="Section_Destination" xml:space="preserve">
+	<value>バックアップ先</value>
+  </data>
+  <data name="RadioBtn_DestSameDir" xml:space="preserve">
+	<value>元ファイルと同じフォルダに保存する</value>
+  </data>
+  <data name="RadioBtn_DestCustomDir" xml:space="preserve">
+	<value>指定したフォルダに保存する</value>
+  </data>
+  <data name="Btn_Browse" xml:space="preserve">
+	<value>参照...</value>
+  </data>
+  <data name="Btn_Open" xml:space="preserve">
+	<value>開く</value>
+  </data>
+  <data name="Section_Other" xml:space="preserve">
+	<value>その他</value>
+  </data>
+  <data name="CheckBox_ExcludeSymLinks" xml:space="preserve">
+	<value>シンボリックリンクを除外する</value>
+  </data>
+
+  <!-- ===== File Filter tab ===== -->
+  <data name="Section_ExcludePatterns" xml:space="preserve">
+	<value>除外パターン</value>
+  </data>
+  <data name="Label_FilterHint" xml:space="preserve">
+	<value>バックアップ対象から除外するファイル名パターンを指定します。ワイルドカード * (任意文字列) と ? (任意1文字) が使えます。　例: *.tmp　*.bak　Thumbs.db　~*</value>
+  </data>
+  <data name="Btn_Add" xml:space="preserve">
+	<value>追加</value>
+  </data>
+  <data name="Btn_DeleteSelected" xml:space="preserve">
+	<value>選択項目を削除</value>
+  </data>
+
+  <!-- ===== General tab ===== -->
+  <data name="Section_Log" xml:space="preserve">
+	<value>ログ</value>
+  </data>
+  <data name="CheckBox_EnableLog" xml:space="preserve">
+	<value>バックアップ結果をログファイルに保存する</value>
+  </data>
+  <data name="Label_LogLocation" xml:space="preserve">
+	<value>保存場所:</value>
+  </data>
+  <data name="Label_RetentionDays" xml:space="preserve">
+	<value>保持する日数:</value>
+  </data>
+  <data name="Label_Days" xml:space="preserve">
+	<value>日</value>
+  </data>
+  <data name="Section_Notification" xml:space="preserve">
+	<value>通知</value>
+  </data>
+  <data name="CheckBox_UseToast" xml:space="preserve">
+	<value>バックアップ完了をトースト通知で表示する（オフの場合はダイアログ表示）</value>
+  </data>
+  <data name="Section_ShellIntegration" xml:space="preserve">
+	<value>エクスプローラー連携</value>
+  </data>
+  <data name="Label_ShellIntegrationHint" xml:space="preserve">
+	<value>右クリックメニューに「DropBackup で複製」を追加または削除します。登録はカレントユーザーのみに適用されます（管理者権限不要）。</value>
+  </data>
+  <data name="Label_CurrentStatus" xml:space="preserve">
+	<value>現在の状態: </value>
+  </data>
+  <data name="ShellStatus_Registered" xml:space="preserve">
+	<value>登録済み</value>
+  </data>
+  <data name="ShellStatus_NotRegistered" xml:space="preserve">
+	<value>未登録</value>
+  </data>
+  <data name="Btn_Register" xml:space="preserve">
+	<value>登録する</value>
+  </data>
+  <data name="Btn_Unregister" xml:space="preserve">
+	<value>登録を解除する</value>
+  </data>
+
+  <!-- ===== Footer buttons ===== -->
+  <data name="Btn_Cancel" xml:space="preserve">
+	<value>キャンセル</value>
+  </data>
+  <data name="Btn_Close" xml:space="preserve">
+	<value>閉じる</value>
+  </data>
+  <data name="About_Version" xml:space="preserve">
+	<value>バージョン {0}</value>
+  </data>
+  <data name="Btn_OK" xml:space="preserve">
+	<value>OK</value>
+  </data>
+
+  <!-- ===== Validation / error messages ===== -->
+  <data name="Err_InvalidDateFormat" xml:space="preserve">
+	<value>日時の書式が正しくありません: {0}
+書式を適用した結果にファイル名に使えない文字 ( \ / : * ? " &lt; &gt; | ) が含まれています。
+
+例: yyMMdd-HHmm</value>
+  </data>
+  <data name="Err_InvalidDateFormat_Title" xml:space="preserve">
+	<value>書式エラー</value>
+  </data>
+  <data name="Err_LogDirEmpty" xml:space="preserve">
+	<value>ログの保存場所を入力してください。</value>
+  </data>
+  <data name="Err_RetentionDaysInvalid" xml:space="preserve">
+	<value>保持する日数には 0 以上の整数を入力してください。</value>
+  </data>
+  <data name="Err_InputError_Title" xml:space="preserve">
+	<value>入力エラー</value>
+  </data>
+  <data name="Err_DestDirNotSet" xml:space="preserve">
+	<value>バックアップ先フォルダが設定されていません。</value>
+  </data>
+  <data name="Err_FolderNotFound" xml:space="preserve">
+	<value>フォルダが存在しません:
+{0}</value>
+  </data>
+  <data name="Err_LogDirNotSet" xml:space="preserve">
+	<value>保存場所が設定されていません。</value>
+  </data>
+  <data name="Err_ShellRegisterFailed" xml:space="preserve">
+	<value>登録に失敗しました。
+{0}</value>
+  </data>
+  <data name="Err_ShellUnregisterFailed" xml:space="preserve">
+	<value>解除に失敗しました。
+{0}</value>
+  </data>
+  <data name="Err_SequentialNumberLimit" xml:space="preserve">
+	<value>連番付加の上限に達しました。
+
+{0}</value>
+  </data>
+  <data name="Msg_InvalidFormat" xml:space="preserve">
+	<value>(無効な書式)</value>
+  </data>
+
+  <!-- ===== Shell register success messages ===== -->
+  <data name="Msg_ShellRegistered" xml:space="preserve">
+	<value>右クリックメニューに登録しました。
+エクスプローラーを再起動すると反映されます。</value>
+  </data>
+  <data name="Msg_ShellUnregistered" xml:space="preserve">
+	<value>右クリックメニューの登録を解除しました。</value>
+  </data>
+
+  <!-- ===== Browse dialog titles ===== -->
+  <data name="Dialog_SelectDestFolder" xml:space="preserve">
+	<value>バックアップ先フォルダを選択してください</value>
+  </data>
+  <data name="Dialog_SelectLogFolder" xml:space="preserve">
+	<value>ログの保存場所を選択してください</value>
+  </data>
+
+  <!-- ===== App.xaml.cs completion notification ===== -->
+  <data name="Notify_Done" xml:space="preserve">
+	<value>完了</value>
+  </data>
+  <data name="Notify_Success" xml:space="preserve">
+	<value>成功: {0}  失敗: {1}  スキップ: {2}</value>
+  </data>
+  <data name="Notify_SkippedSymLinks" xml:space="preserve">
+	<value>【スキップしたシンボリックリンク】</value>
+  </data>
+  <data name="Notify_SkippedByFilter" xml:space="preserve">
+	<value>【除外フィルタによりスキップ】</value>
+  </data>
+
+  <!-- ===== About window ===== -->
+  <data name="About_Description" xml:space="preserve">
+	<value>エクスプローラーの右クリックからファイル・フォルダをタイムスタンプ付きでバックアップするツールです。</value>
+  </data>
+
+  <!-- ===== Shell context menu label ===== -->
+  <data name="ShellMenuLabel" xml:space="preserve">
+	<value>DropBackup で複製</value>
+  </data>
+
+  <!-- ===== NotifyWindow ===== -->
+  <data name="NotifyWindow_Title" xml:space="preserve">
+	<value>バックアップ完了</value>
+  </data>
+  <data name="Notify_LabelSuccess" xml:space="preserve">
+	<value>✔ 成功</value>
+  </data>
+  <data name="Notify_LabelFailed" xml:space="preserve">
+	<value>✖ 失敗</value>
+  </data>
+  <data name="Notify_LabelSkipped" xml:space="preserve">
+	<value>— スキップ</value>
+  </data>
+  <data name="Notify_SectionSymLinks" xml:space="preserve">
+	<value>スキップしたシンボリックリンク</value>
+  </data>
+  <data name="Notify_SectionFilter" xml:space="preserve">
+	<value>除外フィルタによりスキップ</value>
+  </data>
+
+</root>

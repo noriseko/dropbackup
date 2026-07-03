@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DropBackup.Test/DropBackup.Test.csproj" />
+  <Project Path="DropBackup/DropBackup.csproj" />
+</Solution>

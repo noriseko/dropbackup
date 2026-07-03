@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <title>DropBackup アイコンプレビュー</title>
+  <style>
+	body { background: #F0F0F0; display: flex; flex-direction: column;
+		   align-items: center; justify-content: center; min-height: 100vh;
+		   font-family: "Yu Gothic UI", sans-serif; gap: 32px; }
+	h1   { font-size: 20px; color: #333; margin: 0; }
+	.row { display: flex; align-items: flex-end; gap: 24px; }
+	.box { display: flex; flex-direction: column; align-items: center; gap: 8px;
+		   font-size: 12px; color: #555; }
+	/* 各サイズ */
+	.s256 img { width: 256px; height: 256px; }
+	.s48  img { width:  48px; height:  48px; }
+	.s32  img { width:  32px; height:  32px; }
+	.s16  img { width:  16px; height:  16px; }
+	/* 透過確認用チェッカー柄 */
+	.checker {
+	  background-image: linear-gradient(45deg,#ccc 25%,transparent 25%),
+						linear-gradient(-45deg,#ccc 25%,transparent 25%),
+						linear-gradient(45deg,transparent 75%,#ccc 75%),
+						linear-gradient(-45deg,transparent 75%,#ccc 75%);
+	  background-size: 16px 16px;
+	  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+	  background-color: #fff;
+	  padding: 16px; border-radius: 8px;
+	}
+	/* 背景バリエーション */
+	.bg-light { background: #FFFFFF; padding: 16px; border-radius: 8px; }
+	.bg-dark  { background: #1E1E2E; padding: 16px; border-radius: 8px; }
+	.bg-store { background: linear-gradient(135deg,#E8F0FE,#F5F5F5);
+				padding: 16px; border-radius: 12px;
+				box-shadow: 0 2px 12px #0002; }
+  </style>
+</head>
+<body>
+  <h1>DropBackup アイコンプレビュー</h1>
+
+  <div class="row">
+	<div class="box s256">
+	  <div class="checker"><img src="icon.svg" alt="transparent"/></div>
+	  <span>256px — 透過確認</span>
+	</div>
+	<div class="box s256">
+	  <div class="bg-light"><img src="icon.svg" alt="light bg"/></div>
+	  <span>256px — 白背景</span>
+	</div>
+	<div class="box s256">
+	  <div class="bg-dark"><img src="icon.svg" alt="dark bg"/></div>
+	  <span>256px — ダーク背景</span>
+	</div>
+	<div class="box s256">
+	  <div class="bg-store"><img src="icon.svg" alt="store tile"/></div>
+	  <span>256px — Store タイル風</span>
+	</div>
+  </div>
+
+  <!-- 小サイズ確認 -->
+  <div class="row">
+	<div class="box s48">
+	  <div class="bg-light"><img src="icon.svg" alt="48"/></div>
+	  <span>48px</span>
+	</div>
+	<div class="box s32">
+	  <div class="bg-light"><img src="icon.svg" alt="32"/></div>
+	  <span>32px</span>
+	</div>
+	<div class="box s16">
+	  <div class="bg-light"><img src="icon.svg" alt="16"/></div>
+	  <span>16px</span>
+	</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xsd:import namespace="http://www.w3.org/2001/XMLSchema"/>
+	<xsd:element name="root" msdata:IsDataSet="true">
+	  <xsd:complexType>
+		<xsd:choice maxOccurs="unbounded">
+		  <xsd:element name="metadata">
+			<xsd:complexType>
+			  <xsd:sequence>
+				<xsd:element name="value" type="xsd:string" minOccurs="0"/>
+			  </xsd:sequence>
+			  <xsd:attribute name="name" use="required" type="xsd:string"/>
+			  <xsd:attribute name="type" type="xsd:string"/>
+			  <xsd:attribute name="mimetype" type="xsd:string"/>
+			</xsd:complexType>
+		  </xsd:element>
+		  <xsd:element name="assembly">
+			<xsd:complexType>
+			  <xsd:attribute name="alias" type="xsd:string"/>
+			  <xsd:attribute name="name" type="xsd:string"/>
+			</xsd:complexType>
+		  </xsd:element>
+		  <xsd:element name="data">
+			<xsd:complexType>
+			  <xsd:sequence>
+				<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+				<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+			  </xsd:sequence>
+			  <xsd:attribute name="name" use="required" type="xsd:string"/>
+			  <xsd:attribute name="type" type="xsd:string"/>
+			  <xsd:attribute name="mimetype" type="xsd:string"/>
+			</xsd:complexType>
+		  </xsd:element>
+		  <xsd:element name="resheader">
+			<xsd:complexType>
+			  <xsd:sequence>
+				<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+			  </xsd:sequence>
+			  <xsd:attribute name="name" use="required" type="xsd:string"/>
+			</xsd:complexType>
+		  </xsd:element>
+		</xsd:choice>
+	  </xsd:complexType>
+	</xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+	<value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+	<value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+	<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+	<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- ===== Window titles ===== -->
+  <data name="MainWindow_Title" xml:space="preserve">
+	<value>DropBackup Settings</value>
+  </data>
+  <data name="AboutWindow_Title" xml:space="preserve">
+	<value>About DropBackup</value>
+  </data>
+
+  <!-- ===== MainWindow tabs ===== -->
+  <data name="Tab_Backup" xml:space="preserve">
+	<value>Backup</value>
+  </data>
+  <data name="Tab_Filter" xml:space="preserve">
+	<value>File Filter</value>
+  </data>
+  <data name="Tab_General" xml:space="preserve">
+	<value>General</value>
+  </data>
+
+  <!-- ===== Backup tab ===== -->
+  <data name="Section_DateFormat" xml:space="preserve">
+	<value>Date/Time Format</value>
+  </data>
+  <data name="Label_Preview" xml:space="preserve">
+	<value>Preview: </value>
+  </data>
+  <data name="Label_FormatHint" xml:space="preserve">
+	<value>Specifiers: yyyy=year  MM=month  dd=day  HH=hour  mm=min  ss=sec</value>
+  </data>
+  <data name="Section_AppendPos" xml:space="preserve">
+	<value>Timestamp Position</value>
+  </data>
+  <data name="RadioBtn_PosBefore" xml:space="preserve">
+	<value>Before filename  (e.g. 250615-1430 report.docx)</value>
+  </data>
+  <data name="RadioBtn_PosAfter" xml:space="preserve">
+	<value>After filename  (e.g. report 250615-1430.docx)</value>
+  </data>
+  <data name="Section_DuplicateHandling" xml:space="preserve">
+	<value>When file already exists</value>
+  </data>
+  <data name="RadioBtn_OpeRename" xml:space="preserve">
+	<value>Add a sequential number  (e.g. report 250615_2.docx)</value>
+  </data>
+  <data name="RadioBtn_OpeOverride" xml:space="preserve">
+	<value>Overwrite existing file</value>
+  </data>
+  <data name="RadioBtn_OpeDelete" xml:space="preserve">
+	<value>Delete existing file then copy</value>
+  </data>
+  <data name="Section_Destination" xml:space="preserve">
+	<value>Backup Destination</value>
+  </data>
+  <data name="RadioBtn_DestSameDir" xml:space="preserve">
+	<value>Same folder as source file</value>
+  </data>
+  <data name="RadioBtn_DestCustomDir" xml:space="preserve">
+	<value>Specified folder</value>
+  </data>
+  <data name="Btn_Browse" xml:space="preserve">
+	<value>Browse...</value>
+  </data>
+  <data name="Btn_Open" xml:space="preserve">
+	<value>Open</value>
+  </data>
+  <data name="Section_Other" xml:space="preserve">
+	<value>Other</value>
+  </data>
+  <data name="CheckBox_ExcludeSymLinks" xml:space="preserve">
+	<value>Exclude symbolic links</value>
+  </data>
+
+  <!-- ===== File Filter tab ===== -->
+  <data name="Section_ExcludePatterns" xml:space="preserve">
+	<value>Exclude Patterns</value>
+  </data>
+  <data name="Label_FilterHint" xml:space="preserve">
+	<value>Specify filename patterns to exclude from backup. Wildcards * (any string) and ? (any single character) are supported.  e.g. *.tmp  *.bak  Thumbs.db  ~*</value>
+  </data>
+  <data name="Btn_Add" xml:space="preserve">
+	<value>Add</value>
+  </data>
+  <data name="Btn_DeleteSelected" xml:space="preserve">
+	<value>Delete selected</value>
+  </data>
+
+  <!-- ===== General tab ===== -->
+  <data name="Section_Log" xml:space="preserve">
+	<value>Log</value>
+  </data>
+  <data name="CheckBox_EnableLog" xml:space="preserve">
+	<value>Save backup results to log file</value>
+  </data>
+  <data name="Label_LogLocation" xml:space="preserve">
+	<value>Location:</value>
+  </data>
+  <data name="Label_RetentionDays" xml:space="preserve">
+	<value>Retention days:</value>
+  </data>
+  <data name="Label_Days" xml:space="preserve">
+	<value>days</value>
+  </data>
+  <data name="Section_Notification" xml:space="preserve">
+	<value>Notification</value>
+  </data>
+  <data name="CheckBox_UseToast" xml:space="preserve">
+	<value>Show toast notification on completion (otherwise shows a dialog)</value>
+  </data>
+  <data name="Section_ShellIntegration" xml:space="preserve">
+	<value>Explorer Integration</value>
+  </data>
+  <data name="Label_ShellIntegrationHint" xml:space="preserve">
+	<value>Add or remove "Duplicate with DropBackup" from the right-click context menu. Registration applies to the current user only (no admin rights required).</value>
+  </data>
+  <data name="Label_CurrentStatus" xml:space="preserve">
+	<value>Current status: </value>
+  </data>
+  <data name="ShellStatus_Registered" xml:space="preserve">
+	<value>Registered</value>
+  </data>
+  <data name="ShellStatus_NotRegistered" xml:space="preserve">
+	<value>Not registered</value>
+  </data>
+  <data name="Btn_Register" xml:space="preserve">
+	<value>Register</value>
+  </data>
+  <data name="Btn_Unregister" xml:space="preserve">
+	<value>Unregister</value>
+  </data>
+
+  <!-- ===== Footer buttons ===== -->
+  <data name="Btn_Cancel" xml:space="preserve">
+	<value>Cancel</value>
+  </data>
+  <data name="Btn_Close" xml:space="preserve">
+	<value>Close</value>
+  </data>
+  <data name="About_Version" xml:space="preserve">
+	<value>Version {0}</value>
+  </data>
+  <data name="Btn_OK" xml:space="preserve">
+	<value>OK</value>
+  </data>
+
+  <!-- ===== Validation / error messages ===== -->
+  <data name="Err_InvalidDateFormat" xml:space="preserve">
+	<value>Invalid date/time format: {0}
+The formatted result contains characters not allowed in file names ( \ / : * ? " &lt; &gt; | ).
+
+Example: yyMMdd-HHmm</value>
+  </data>
+  <data name="Err_InvalidDateFormat_Title" xml:space="preserve">
+	<value>Format Error</value>
+  </data>
+  <data name="Err_LogDirEmpty" xml:space="preserve">
+	<value>Please specify the log folder.</value>
+  </data>
+  <data name="Err_RetentionDaysInvalid" xml:space="preserve">
+	<value>Retention days must be an integer of 0 or more.</value>
+  </data>
+  <data name="Err_InputError_Title" xml:space="preserve">
+	<value>Input Error</value>
+  </data>
+  <data name="Err_DestDirNotSet" xml:space="preserve">
+	<value>Backup destination folder is not configured.</value>
+  </data>
+  <data name="Err_FolderNotFound" xml:space="preserve">
+	<value>Folder does not exist:
+{0}</value>
+  </data>
+  <data name="Err_LogDirNotSet" xml:space="preserve">
+	<value>Log folder is not configured.</value>
+  </data>
+  <data name="Err_ShellRegisterFailed" xml:space="preserve">
+	<value>Registration failed.
+{0}</value>
+  </data>
+  <data name="Err_ShellUnregisterFailed" xml:space="preserve">
+	<value>Unregistration failed.
+{0}</value>
+  </data>
+  <data name="Err_SequentialNumberLimit" xml:space="preserve">
+	<value>Sequential number limit reached.
+
+{0}</value>
+  </data>
+  <data name="Msg_InvalidFormat" xml:space="preserve">
+	<value>(invalid format)</value>
+  </data>
+
+  <!-- ===== Shell register success messages ===== -->
+  <data name="Msg_ShellRegistered" xml:space="preserve">
+	<value>Added to context menu.
+Restart Explorer to apply the change.</value>
+  </data>
+  <data name="Msg_ShellUnregistered" xml:space="preserve">
+	<value>Removed from context menu.</value>
+  </data>
+
+  <!-- ===== Browse dialog titles ===== -->
+  <data name="Dialog_SelectDestFolder" xml:space="preserve">
+	<value>Select backup destination folder</value>
+  </data>
+  <data name="Dialog_SelectLogFolder" xml:space="preserve">
+	<value>Select log folder</value>
+  </data>
+
+  <!-- ===== App.xaml.cs completion notification ===== -->
+  <data name="Notify_Done" xml:space="preserve">
+	<value>Done</value>
+  </data>
+  <data name="Notify_Success" xml:space="preserve">
+	<value>Success: {0}  Failed: {1}  Skipped: {2}</value>
+  </data>
+  <data name="Notify_SkippedSymLinks" xml:space="preserve">
+	<value>[Skipped symbolic links]</value>
+  </data>
+  <data name="Notify_SkippedByFilter" xml:space="preserve">
+	<value>[Skipped by file filter]</value>
+  </data>
+
+  <!-- ===== About window ===== -->
+  <data name="About_Description" xml:space="preserve">
+	<value>A tool to duplicate files and folders with a timestamp via Explorer's right-click menu.</value>
+  </data>
+
+  <!-- ===== Shell context menu label ===== -->
+  <data name="ShellMenuLabel" xml:space="preserve">
+	<value>Duplicate with DropBackup</value>
+  </data>
+
+  <!-- ===== NotifyWindow ===== -->
+  <data name="NotifyWindow_Title" xml:space="preserve">
+	<value>Backup Complete</value>
+  </data>
+  <data name="Notify_LabelSuccess" xml:space="preserve">
+	<value>✔ Success</value>
+  </data>
+  <data name="Notify_LabelFailed" xml:space="preserve">
+	<value>✖ Failed</value>
+  </data>
+  <data name="Notify_LabelSkipped" xml:space="preserve">
+	<value>— Skipped</value>
+  </data>
+  <data name="Notify_SectionSymLinks" xml:space="preserve">
+	<value>Skipped symbolic links</value>
+  </data>
+  <data name="Notify_SectionFilter" xml:space="preserve">
+	<value>Skipped by file filter</value>
+  </data>
+
+</root>
