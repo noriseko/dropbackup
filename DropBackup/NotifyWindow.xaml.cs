@@ -1,14 +1,19 @@
 using System.Collections.Generic;
 using System.Windows;
+using System.Windows.Threading;
 using Res = DropBackup.Properties.Resources;
 
 namespace DropBackup;
 
 public partial class NotifyWindow : Window
 {
+    private static readonly System.TimeSpan AutoCloseDelay = System.TimeSpan.FromSeconds(5);
+    private DispatcherTimer? _autoCloseTimer;
+
     public NotifyWindow(int success, int failed, int skipped,
                         IReadOnlyList<string> skippedSymLinks,
-                        IReadOnlyList<string> skippedByFilter)
+                        IReadOnlyList<string> skippedByFilter,
+                        bool autoCloseOnSuccess = false)
     {
         InitializeComponent();
 
@@ -53,7 +58,23 @@ public partial class NotifyWindow : Window
 
         // Button label
         btnClose.Content = Res.Btn_Close;
+
+        // Auto-close after a short delay when there are no failures and no details to review.
+        if (autoCloseOnSuccess && failed == 0 && !hasDetails)
+        {
+            _autoCloseTimer = new DispatcherTimer { Interval = AutoCloseDelay };
+            _autoCloseTimer.Tick += (_, _) =>
+            {
+                _autoCloseTimer!.Stop();
+                Close();
+            };
+            Loaded += (_, _) => _autoCloseTimer.Start();
+        }
     }
 
-    private void btnClose_Click(object sender, RoutedEventArgs e) => Close();
+    private void btnClose_Click(object sender, RoutedEventArgs e)
+    {
+        _autoCloseTimer?.Stop();
+        Close();
+    }
 }

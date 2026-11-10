@@ -194,6 +194,15 @@ namespace DropBackup.Properties {
                 return ResourceManager.GetString("CheckBox_UseToast", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Automatically close the completion dialog when there are no failures.
+        /// </summary>
+        public static string CheckBox_AutoCloseOnSuccess {
+            get {
+                return ResourceManager.GetString("CheckBox_AutoCloseOnSuccess", resourceCulture);
+            }
+        }
         
         /// <summary>
         ///   Looks up a localized string similar to Select backup destination folder.

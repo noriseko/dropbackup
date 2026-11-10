@@ -48,6 +48,9 @@ internal class Settings
     /// <summary>When <see langword="true"/>, toast notifications are used; otherwise a custom dialog is shown.</summary>
     public bool UseToast { get; set; } = false;
 
+    /// <summary>When <see langword="true"/>, the completion dialog auto-closes after a short delay when there are no failures.</summary>
+    public bool AutoCloseOnSuccess { get; set; } = false;
+
     public static string GetIniFile()
     {
         string appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
@@ -92,6 +95,7 @@ internal class Settings
         DestDir = sbDest.ToString();
 
         UseToast = IniFile.GetPrivateProfileInt("Notification", "UseToast", 0, iniFile) == 1;
+        AutoCloseOnSuccess = IniFile.GetPrivateProfileInt("Notification", "AutoCloseOnSuccess", 0, iniFile) == 1;
     }
 
     public void Save()
@@ -114,6 +118,7 @@ internal class Settings
         IniFile.WritePrivateProfileString("Destination", "DestDir", DestDir, iniFile);
 
         IniFile.WritePrivateProfileString("Notification", "UseToast", UseToast ? "1" : "0", iniFile);
+        IniFile.WritePrivateProfileString("Notification", "AutoCloseOnSuccess", AutoCloseOnSuccess ? "1" : "0", iniFile);
     }
 }
 

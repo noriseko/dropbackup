@@ -165,6 +165,9 @@
   <data name="CheckBox_UseToast" xml:space="preserve">
 	<value>Show toast notification on completion (otherwise shows a dialog)</value>
   </data>
+  <data name="CheckBox_AutoCloseOnSuccess" xml:space="preserve">
+	<value>Automatically close the completion dialog when there are no failures</value>
+  </data>
   <data name="Section_ShellIntegration" xml:space="preserve">
 	<value>Explorer Integration</value>
   </data>

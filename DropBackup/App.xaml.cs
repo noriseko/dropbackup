@@ -68,7 +68,8 @@ public partial class App : Application
             }
         }
 
-        var win = new NotifyWindow(success, failed, skipped, skippedSymLinks, skippedByFilter);
+        var win = new NotifyWindow(success, failed, skipped, skippedSymLinks, skippedByFilter,
+                                   settings.AutoCloseOnSuccess);
         win.ShowDialog();
     }
 }
