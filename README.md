@@ -43,6 +43,7 @@ A lightweight Windows desktop application for quick file and folder backups with
 - **Logging & Notifications**
   - Optional backup log with configurable retention
   - Completion dialog or unobtrusive toast notification
+  - Optional auto-close of the completion dialog (with countdown) when there are no failures
   - Detailed operation summary
 
 - **User-Friendly Interface**

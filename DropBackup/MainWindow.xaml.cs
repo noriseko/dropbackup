@@ -60,6 +60,7 @@ public partial class MainWindow : Window
         tbLogDirectory.Text     = _settings.LogDirectory;
         tbRetentionDays.Text    = _settings.LogRetentionDays.ToString();
         cbUseToast.IsChecked    = _settings.UseToast;
+        cbAutoClose.IsChecked   = _settings.AutoCloseOnSuccess;
         UpdateLogOptionsEnabled();
     }
 
@@ -118,6 +119,7 @@ public partial class MainWindow : Window
         _settings.LogDirectory     = tbLogDirectory.Text.Trim();
         _settings.LogRetentionDays = int.TryParse(tbRetentionDays.Text, out int d) ? d : 30;
         _settings.UseToast         = cbUseToast.IsChecked == true;
+        _settings.AutoCloseOnSuccess = cbAutoClose.IsChecked == true;
 
         // Destination tab
         _settings.UseCustomDestDir = rbDestCustomDir.IsChecked == true;

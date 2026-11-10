@@ -122,6 +122,15 @@ namespace DropBackup.Properties {
                 return ResourceManager.GetString("Btn_Close", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Close ({0}).
+        /// </summary>
+        public static string Btn_CloseCountdown {
+            get {
+                return ResourceManager.GetString("Btn_CloseCountdown", resourceCulture);
+            }
+        }
         
         /// <summary>
         ///   Looks up a localized string similar to Delete selected.
@@ -192,6 +201,15 @@ namespace DropBackup.Properties {
         public static string CheckBox_UseToast {
             get {
                 return ResourceManager.GetString("CheckBox_UseToast", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Automatically close the completion dialog when there are no failures.
+        /// </summary>
+        public static string CheckBox_AutoCloseOnSuccess {
+            get {
+                return ResourceManager.GetString("CheckBox_AutoCloseOnSuccess", resourceCulture);
             }
         }
         

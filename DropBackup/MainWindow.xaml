@@ -224,6 +224,9 @@
 						<Separator Margin="0,0,0,8" Background="#E0E0E0"/>
 						<CheckBox x:Name="cbUseToast"
 								  Content="{x:Static res:Resources.CheckBox_UseToast}"/>
+						<CheckBox x:Name="cbAutoClose"
+								  Margin="0,8,0,0"
+								  Content="{x:Static res:Resources.CheckBox_AutoCloseOnSuccess}"/>
 
 								</StackPanel>
 							</ScrollViewer>

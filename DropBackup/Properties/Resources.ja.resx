@@ -165,6 +165,9 @@
   <data name="CheckBox_UseToast" xml:space="preserve">
 	<value>バックアップ完了をトースト通知で表示する（オフの場合はダイアログ表示）</value>
   </data>
+  <data name="CheckBox_AutoCloseOnSuccess" xml:space="preserve">
+	<value>失敗がない場合は完了ダイアログを自動的に閉じる</value>
+  </data>
   <data name="Section_ShellIntegration" xml:space="preserve">
 	<value>エクスプローラー連携</value>
   </data>
@@ -193,6 +196,9 @@
   </data>
   <data name="Btn_Close" xml:space="preserve">
 	<value>閉じる</value>
+  </data>
+  <data name="Btn_CloseCountdown" xml:space="preserve">
+	<value>閉じる ({0})</value>
   </data>
   <data name="About_Version" xml:space="preserve">
 	<value>バージョン {0}</value>
