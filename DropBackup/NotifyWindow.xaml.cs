@@ -9,6 +9,7 @@ public partial class NotifyWindow : Window
 {
     private static readonly System.TimeSpan AutoCloseDelay = System.TimeSpan.FromSeconds(5);
     private DispatcherTimer? _autoCloseTimer;
+    private int _remainingSeconds;
 
     public NotifyWindow(int success, int failed, int skipped,
                         IReadOnlyList<string> skippedSymLinks,
@@ -62,14 +63,59 @@ public partial class NotifyWindow : Window
         // Auto-close after a short delay when there are no failures and no details to review.
         if (autoCloseOnSuccess && failed == 0 && !hasDetails)
         {
-            _autoCloseTimer = new DispatcherTimer { Interval = AutoCloseDelay };
+            _remainingSeconds = (int)AutoCloseDelay.TotalSeconds;
+            btnClose.Content = string.Format(Res.Btn_CloseCountdown, _remainingSeconds);
+
+            _autoCloseTimer = new DispatcherTimer { Interval = System.TimeSpan.FromSeconds(1) };
             _autoCloseTimer.Tick += (_, _) =>
             {
-                _autoCloseTimer!.Stop();
-                Close();
+                _remainingSeconds--;
+                if (_remainingSeconds <= 0)
+                {
+                    _autoCloseTimer!.Stop();
+                    Close();
+                }
+                else
+                {
+                    btnClose.Content = string.Format(Res.Btn_CloseCountdown, _remainingSeconds);
+                }
             };
             Loaded += (_, _) => _autoCloseTimer.Start();
+
+            // Clicking anywhere on the window cancels the countdown (but not via the Close button, which closes).
+            PreviewMouseDown += NotifyWindow_PreviewMouseDown;
         }
+    }
+
+    private void NotifyWindow_PreviewMouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    {
+        // Let the Close button perform its normal close action.
+        if (IsClickOnCloseButton(e.OriginalSource as DependencyObject))
+            return;
+
+        CancelAutoClose();
+    }
+
+    private bool IsClickOnCloseButton(DependencyObject? source)
+    {
+        while (source != null)
+        {
+            if (ReferenceEquals(source, btnClose))
+                return true;
+            source = System.Windows.Media.VisualTreeHelper.GetParent(source);
+        }
+        return false;
+    }
+
+    private void CancelAutoClose()
+    {
+        if (_autoCloseTimer == null)
+            return;
+
+        _autoCloseTimer.Stop();
+        _autoCloseTimer = null;
+        PreviewMouseDown -= NotifyWindow_PreviewMouseDown;
+        btnClose.Content = Res.Btn_Close;
     }
 
     private void btnClose_Click(object sender, RoutedEventArgs e)

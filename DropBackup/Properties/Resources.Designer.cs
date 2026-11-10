@@ -122,6 +122,15 @@ namespace DropBackup.Properties {
                 return ResourceManager.GetString("Btn_Close", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Close ({0}).
+        /// </summary>
+        public static string Btn_CloseCountdown {
+            get {
+                return ResourceManager.GetString("Btn_CloseCountdown", resourceCulture);
+            }
+        }
         
         /// <summary>
         ///   Looks up a localized string similar to Delete selected.

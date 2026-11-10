@@ -197,6 +197,9 @@
   <data name="Btn_Close" xml:space="preserve">
 	<value>閉じる</value>
   </data>
+  <data name="Btn_CloseCountdown" xml:space="preserve">
+	<value>閉じる ({0})</value>
+  </data>
   <data name="About_Version" xml:space="preserve">
 	<value>バージョン {0}</value>
   </data>
